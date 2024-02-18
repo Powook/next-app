@@ -1,0 +1,50 @@
+.mainBlock {
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.logo {
+  aspect-ratio: 1;
+  filter: drop-shadow(0 0 0.75rem rgb(115, 213, 255));
+}
+
+.mainBlock__info {
+  >h1 {
+    margin-bottom: 16px;
+    font-weight: bold;
+    text-wrap: balance;
+  }
+
+  >p {
+    text-wrap: balance;
+    margin-bottom: 16px;
+    line-height: 20px;
+
+  }
+}
+
+.mainBlock__blocks {
+  display: flex;
+  justify-content: space-between;
+  gap:16px;
+  margin-bottom: 16px;
+
+  &>div {
+    position: relative;
+    flex: 1;
+    padding: 16px;
+    text-wrap: balance;
+    background-color: rgba(0, 0, 0, 0.511);
+    border-radius: 12px;    
+
+    &::after {
+      position: absolute;
+      top: -4px; bottom: -4px;
+      left: -4px; right: -4px;
+      background: linear-gradient(#482fed, #dd3acf);
+      content: '';
+      z-index: -1;
+      border-radius: 16px;    
+    }
+  }
+}
